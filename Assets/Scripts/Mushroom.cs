@@ -7,6 +7,8 @@ public class Mushroom : MonoBehaviour
     public Rigidbody2D HeroRB2D;
     public LayerMask HeroMask;
     public Transform HeroCheck;
+    public Transform HeroCheck2;
+    public Transform HeroCheck3;
     bool onHero;
     public int force_jump = 15;
     void Start()
@@ -17,7 +19,9 @@ public class Mushroom : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        onHero = Physics2D.OverlapBox(HeroCheck.position, new Vector2(0, 0.1f), 0, HeroMask);
+        onHero = Physics2D.OverlapBox(HeroCheck.position, new Vector2(0, 0.2f), 0, HeroMask) || 
+                Physics2D.OverlapBox(HeroCheck2.position, new Vector2(0, 0.2f), 0, HeroMask) ||
+                Physics2D.OverlapBox(HeroCheck3.position, new Vector2(0, 0.2f), 0, HeroMask);
         if (onHero)
         {
             HeroRB2D.velocity = new Vector2(HeroRB2D.velocity.x, 0);
