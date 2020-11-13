@@ -119,7 +119,7 @@ public class HeroMove : MonoBehaviour
     }
     void CheckingGround()
     {
-        onGround = Physics2D.OverlapCircle(GroundCheck.position, checkRadius, Ground) || Physics2D.OverlapCircle(GroundCheck.position, checkRadius, Stone);
+        onGround = Physics2D.OverlapBox(GroundCheck.position, new Vector2(0, checkRadius), 0, Ground) || Physics2D.OverlapBox(GroundCheck.position, new Vector2(0, checkRadius), 0, Stone);
         anim.SetBool("onGround", onGround);
     }
     void Lunge()

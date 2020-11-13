@@ -7,6 +7,7 @@ TagManager:
   - trap
   - pers
   - coin
+  - sword
   layers:
   - Default
   - TransparentFX

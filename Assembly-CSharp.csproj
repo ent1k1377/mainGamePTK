@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Heart.cs" />
     <Compile Include="Assets\Scripts\HeroMove.cs" />
     <Compile Include="Assets\Scripts\HeroTracking.cs" />
+    <Compile Include="Assets\Scripts\Lever.cs" />
     <Compile Include="Assets\Scripts\Mushroom.cs" />
     <Compile Include="Assets\Scripts\Spikes.cs" />
     <Compile Include="Assets\Scripts\Stone.cs" />
