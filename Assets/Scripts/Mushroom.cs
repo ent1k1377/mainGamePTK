@@ -25,7 +25,6 @@ public class Mushroom : MonoBehaviour
         if (onHero)
         {
             HeroRB2D.velocity = new Vector2(HeroRB2D.velocity.x, 0);
-            print(HeroRB2D.transform.up);
             HeroRB2D.AddForce(new Vector2(0, force_jump), ForceMode2D.Impulse);
         }
     }

@@ -8,6 +8,7 @@ TagManager:
   - pers
   - coin
   - sword
+  - enemy
   layers:
   - Default
   - TransparentFX

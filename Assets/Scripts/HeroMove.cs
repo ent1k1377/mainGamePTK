@@ -40,7 +40,6 @@ public class HeroMove : MonoBehaviour
 
     public Vector2 hero_spawn;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -175,30 +174,35 @@ public class HeroMove : MonoBehaviour
     {
         if (col.gameObject.tag == "trap")
         {
-            
-            if (num_health > 0)
-            {
-                if (!onPhantom)
-                {
-                    num_health -= 1;
-                    Phantom();
-                    Invoke("Phantom", timePhantom);
-                }
-            }
-            else
-            {
-                onPhantom = true;
-                Phantom();
-                onDeath = true;
-            }
+            CheckHealth();
         }
-        else if (col.gameObject.tag == "coin" && coinText != col.name)
+        if (col.gameObject.tag == "coin" && coinText != col.name)
         {
             coinText = col.name;
             num_coins += 1;
             anim_coin = col.gameObject.GetComponent<Animator>();
             anim_coin.Play("coin_pickup");
 
+        }
+        
+    }
+
+    public void CheckHealth()
+    {
+        if (num_health > 0)
+        {
+            if (!onPhantom)
+            {
+                num_health -= 1;
+                Phantom();
+                Invoke("Phantom", timePhantom);
+            }
+        }
+        else
+        {
+            onPhantom = true;
+            Phantom();
+            onDeath = true;
         }
     }
 
