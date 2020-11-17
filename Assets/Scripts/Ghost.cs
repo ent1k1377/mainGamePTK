@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ghost : MonoBehaviour
 {
-    public float ghostDelay;
+    public static float ghostDelay = 0.04f;
     private float ghostDelaySeconds;
     public GameObject ghost;
 

@@ -1,9 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
+using UnityEngine.XR.WSA.Input;
 
 public class HeroMove : MonoBehaviour
 {
@@ -30,7 +32,7 @@ public class HeroMove : MonoBehaviour
 
     public int lungeImpulse = 500;
     bool lockLunge = true;
-    public float lockLungeTime = 2f;
+    public float lockLungeTime = 0.4f;
 
     public bool onStone;
     public bool onPush;
@@ -121,23 +123,26 @@ public class HeroMove : MonoBehaviour
         onGround = Physics2D.OverlapBox(GroundCheck.position, new Vector2(0, checkRadius), 0, Ground) || Physics2D.OverlapBox(GroundCheck.position, new Vector2(0, checkRadius), 0, Stone);
         anim.SetBool("onGround", onGround);
     }
+    IEnumerator TimerLunge(Vector2 vect)
+    {
+        lockLunge = false;
+        rb.velocity = new Vector2(0, rb.velocity.y);
+        for (int i = 0; i < 6; i++)
+        {
+            ghost.makeGhost = true;
+            Ghost.ghostDelay = 0.001f;
+            rb.AddForce(vect * lungeImpulse/ 5f);
+            yield return new WaitForSeconds(0.02f);
+        }
+        Ghost.ghostDelay = 0.04f;
+        Invoke("LungeLock", lockLungeTime);
+    }
     void Lunge()
     {
-        
         if (Input.GetKeyDown(KeyCode.LeftControl) && lockLunge)
         {
-            rb.simulated = false;
-            lockLunge = false;
-            Invoke("LungeLock", lockLungeTime);
-            rb.velocity = new Vector2(0, rb.velocity.y);
-            if (!faceRight) {
-                rb.AddForce(Vector2.left * lungeImpulse);
-            }
-            else
-            {
-                rb.AddForce(Vector2.right * lungeImpulse);
-            }
-            rb.simulated = true;
+            if (faceRight) StartCoroutine(TimerLunge(Vector2.right));
+            else StartCoroutine(TimerLunge(Vector2.left));
         }
     }
     void LungeLock()
