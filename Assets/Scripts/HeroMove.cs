@@ -211,7 +211,7 @@ public class HeroMove : MonoBehaviour
         }
     }
 
-    bool onPhantom = false;
+    public bool onPhantom = false;
     float timePhantom = 3f;
     void Phantom()
     {
