@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\HeroTracking.cs" />
     <Compile Include="Assets\Scripts\Lever.cs" />
     <Compile Include="Assets\Scripts\Mushroom.cs" />
+    <Compile Include="Assets\Scripts\SlimeEnemy.cs" />
     <Compile Include="Assets\Scripts\Spikes.cs" />
     <Compile Include="Assets\Scripts\Stone.cs" />
     <Compile Include="Assets\Scripts\WormEnemy.cs" />
