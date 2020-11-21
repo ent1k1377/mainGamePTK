@@ -79,7 +79,7 @@ public class WormEnemy : MonoBehaviour
     }
     void CheckHero()
     {
-        onHero = Physics2D.OverlapBox(HeroCheck.position, new Vector2(0, 0.1f), 0, Pers);
+        onHero = Physics2D.OverlapBox(HeroCheck.position, new Vector2(0, 0.15f), 0, Pers);
 
         if (onHero && !death)
         {

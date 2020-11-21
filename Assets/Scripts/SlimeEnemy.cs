@@ -59,7 +59,6 @@ public class SlimeEnemy : MonoBehaviour
 
 
         pos = gameObject.GetComponent<Transform>().position;
-        print(123);
         if (pos.x > rightBorder)
         {
             speed = -Math.Abs(speed);
