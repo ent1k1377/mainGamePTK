@@ -64,12 +64,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CoinCounter.cs" />
+    <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\Ghost.cs" />
     <Compile Include="Assets\Scripts\GoblinEnemy.cs" />
     <Compile Include="Assets\Scripts\Heart.cs" />
     <Compile Include="Assets\Scripts\HeroMove.cs" />
     <Compile Include="Assets\Scripts\HeroTracking.cs" />
     <Compile Include="Assets\Scripts\Lever.cs" />
+    <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\Mushroom.cs" />
     <Compile Include="Assets\Scripts\SlimeEnemy.cs" />
     <Compile Include="Assets\Scripts\Spikes.cs" />
