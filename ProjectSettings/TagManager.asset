@@ -9,6 +9,7 @@ TagManager:
   - coin
   - sword
   - enemy
+  - gameOver
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Button
   - Pers
   - Trap
-  - 
+  - GameOver
   - 
   - 
   - 

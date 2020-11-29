@@ -14,6 +14,7 @@ public class HeroTracking : MonoBehaviour
     void Start()
     {
         pers_trans = pers.GetComponent<Transform>();
+        transform.position = pers_trans.position;
     }
 
     // Update is called once per frame

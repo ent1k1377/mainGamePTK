@@ -5,7 +5,6 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
-using UnityEngine.XR.WSA.Input;
 
 public class HeroMove : MonoBehaviour
 {
@@ -48,10 +47,11 @@ public class HeroMove : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
-        transform.position = hero_spawn;
+        //transform.position = hero_spawn;
         color.a = 0.4f;
         num_health = 3;
         num_coins = 0;
+        hero_spawn = transform.position;
 
     }
 
@@ -177,6 +177,10 @@ public class HeroMove : MonoBehaviour
     string coinText = "";
     private void OnTriggerEnter2D(Collider2D col)
     {
+        if (col.gameObject.tag == "gameOver")
+        {
+            Spawn();
+        }
         if (col.gameObject.tag == "trap")
         {
             CheckHealth();
