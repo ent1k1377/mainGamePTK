@@ -11,6 +11,8 @@ public class Mushroom : MonoBehaviour
     public Transform HeroCheck3;
     bool onHero;
     public int force_jump = 15;
+
+    public AudioSource jumpA;
     void Start()
     {
         
@@ -24,6 +26,7 @@ public class Mushroom : MonoBehaviour
                 Physics2D.OverlapBox(HeroCheck3.position, new Vector2(0, 0.2f), 0, HeroMask);
         if (onHero)
         {
+            jumpA.Play();
             HeroRB2D.velocity = new Vector2(HeroRB2D.velocity.x, 0);
             HeroRB2D.AddForce(new Vector2(0, force_jump), ForceMode2D.Impulse);
         }

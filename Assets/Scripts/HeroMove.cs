@@ -39,7 +39,10 @@ public class HeroMove : MonoBehaviour
     public Transform PushCheck;
 
 
-    public Vector2 hero_spawn;
+    // AUDIO 
+    public AudioSource lungeA;
+    public AudioSource swordA;
+    public AudioSource coinA;
 
     // Start is called before the first frame update
     void Start()
@@ -51,7 +54,6 @@ public class HeroMove : MonoBehaviour
         color.a = 0.4f;
         num_health = 3;
         num_coins = 0;
-        hero_spawn = transform.position;
 
     }
 
@@ -125,6 +127,7 @@ public class HeroMove : MonoBehaviour
     }
     IEnumerator TimerLunge(Vector2 vect)
     {
+        lungeA.Play();
         lockLunge = false;
         rb.velocity = new Vector2(0, rb.velocity.y);
         for (int i = 0; i < 6; i++)
@@ -141,6 +144,7 @@ public class HeroMove : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftControl) && lockLunge)
         {
+            //audio.Play();
             if (faceRight) StartCoroutine(TimerLunge(Vector2.right));
             else StartCoroutine(TimerLunge(Vector2.left));
         }
@@ -149,15 +153,27 @@ public class HeroMove : MonoBehaviour
     {
         lockLunge = true;
     }
+
+    IEnumerator SwordTimer()
+    {
+        swordA.Play(1);
+        anim.SetBool("sword", true);
+        yield return new WaitForSeconds(2.4f);
+    }
+
     void Sword()
     {
         anim.SetBool("sword", false);
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && onGround && !anim.GetCurrentAnimatorStateInfo(0).IsName("hero_sword"))
         {
+            swordA.Play(1);
             anim.SetBool("sword", true);
+            //StartCoroutine(SwordTimer());
         }
         
     }
+
+
     public float size_x_collider = 0.11f;
     void Pushing()
     {
@@ -187,6 +203,7 @@ public class HeroMove : MonoBehaviour
         }
         if (col.gameObject.tag == "coin" && coinText != col.name)
         {
+            coinA.Play();
             coinText = col.name;
             num_coins += 1;
             anim_coin = col.gameObject.GetComponent<Animator>();

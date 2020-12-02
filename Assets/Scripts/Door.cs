@@ -8,6 +8,7 @@ public class Door : MonoBehaviour
     public int indexScene;
     public Animator animHero;
     public HeroMove HM;
+    GameDB db = new GameDB();
     private void OnTriggerStay2D(Collider2D col)
     {
         print(1);
@@ -22,6 +23,9 @@ public class Door : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
+            db.Open();
+            db.LevelInfoInsert(2, 2, 3, 4);
+            db.Close();
             StartCoroutine(LoadScene());
         }
     }
