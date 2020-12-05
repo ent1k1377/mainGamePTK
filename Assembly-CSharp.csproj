@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\Heart.cs" />
     <Compile Include="Assets\Scripts\HeroMove.cs" />
     <Compile Include="Assets\Scripts\HeroTracking.cs" />
+    <Compile Include="Assets\Scripts\Level.cs" />
     <Compile Include="Assets\Scripts\Lever.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\Mushroom.cs" />
@@ -799,9 +800,6 @@
     </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
       <HintPath>E:/unity projects/mainGamePTK/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Rider.Editor">
-      <HintPath>E:/unity projects/mainGamePTK/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
       <HintPath>E:/unity projects/mainGamePTK/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>

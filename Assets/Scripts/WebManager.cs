@@ -17,4 +17,16 @@ public class WebManager : MonoBehaviour
         yield return www;
     }
 
+    static public IEnumerator SelectLevelCoins(int id)
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("id", id);
+
+        WWW www = new WWW("GameDB.local/selectLevelCoins.php", form);
+        yield return www.text;
+        Level.text = www.text;
+        print(Level.text);
+        
+    }
+
 }

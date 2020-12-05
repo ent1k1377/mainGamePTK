@@ -5,9 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    public void StartGame()
+    public GameObject canvas1;
+    public GameObject canvas2;
+    public void LevelsWindow()
     {
-        SceneManager.LoadScene(1);
+        canvas1.SetActive(false);
+        canvas2.SetActive(true);
+    }
+    public void MainWindow()
+    {
+        canvas1.SetActive(true);
+        canvas2.SetActive(false);
     }
     public void ExitGame()
     {
