@@ -286,6 +286,12 @@
     <Reference Include="ICSharpCode.NRefactory">
       <HintPath>E:/unity projects/mainGamePTK/Library/PackageCache/com.unity.render-pipelines.core@7.3.1/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
+    <Reference Include="System.Data">
+      <HintPath>E:/unity projects/mainGamePTK/Assets/Plugins/System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>E:/unity projects/mainGamePTK/Assets/Plugins/Assembly-CSharp.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>E:/unity projects/mainGamePTK/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>

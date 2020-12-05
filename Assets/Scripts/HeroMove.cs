@@ -250,12 +250,15 @@ public class HeroMove : MonoBehaviour
 
     public bool onDeath;
     public bool onDeathAstral = true;
+    public Door door;
     void Death()
     {
         anim.SetBool("onDeath", onDeath);
         anim.SetBool("onDeathAstral", onDeathAstral);
         if (onDeath && onDeathAstral)
         {
+            
+            StartCoroutine(WebManager.ConnectDB(door.indexNextScene - 1, 0, 0, 1));
             onDeathAstral = false;
             Invoke("Spawn", 1);
         }

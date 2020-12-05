@@ -1,11 +1,20 @@
-﻿
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using System.Data.SqlClient;
 using System.Data;
-
-public class GameDB
+public class GameDB : MonoBehaviour
 {
+
     SqlConnection connection;
     SqlCommand command;
+
+    private void Start()
+    {
+        Open();
+        LevelInfoInsert(2, 2, 3, 4);
+        Close();
+    }
 
     public void Open()
     {
@@ -28,4 +37,6 @@ public class GameDB
         command.Parameters.AddWithValue("@death", death);
         command.ExecuteScalar();
     }
+
 }
+
