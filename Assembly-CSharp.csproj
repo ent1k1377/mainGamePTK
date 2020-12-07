@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\CoinCounter.cs" />
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\GameDB.cs" />
+    <Compile Include="Assets\Scripts\GameSettings.cs" />
     <Compile Include="Assets\Scripts\Ghost.cs" />
     <Compile Include="Assets\Scripts\GoblinEnemy.cs" />
     <Compile Include="Assets\Scripts\Heart.cs" />

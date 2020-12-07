@@ -936,7 +936,7 @@ Canvas:
   m_GameObject: {fileID: 539595874}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 1716074423}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -7903,12 +7903,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.1
+  m_fontSize: 41.55
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 46
+  m_fontSizeMax: 150.88
   m_fontStyle: 33
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
@@ -9445,6 +9445,7 @@ GameObject:
   - component: {fileID: 1716074425}
   - component: {fileID: 1716074427}
   - component: {fileID: 1716074428}
+  - component: {fileID: 1716074426}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -9534,6 +9535,18 @@ MonoBehaviour:
   borders:
   - -3
   - 3
+--- !u!114 &1716074426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716074421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fac062335b5c8884baa61724ad6bbff8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1716074427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9644,12 +9657,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 37.8
+  m_fontSize: 67.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 159.1
   m_fontStyle: 33
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
@@ -10254,6 +10267,11 @@ PrefabInstance:
       propertyPath: door
       value: 
       objectReference: {fileID: 7920304590714793651}
+    - target: {fileID: 5770878195196332751, guid: cc36f69c28e45ce4b8dca842f343e7c6,
+        type: 3}
+      propertyPath: jumpForce
+      value: 53
+      objectReference: {fileID: 0}
     - target: {fileID: 5770878196663114857, guid: cc36f69c28e45ce4b8dca842f343e7c6,
         type: 3}
       propertyPath: m_Enabled

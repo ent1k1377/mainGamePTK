@@ -8037,7 +8037,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 41.65
+  m_fontSize: 41.55
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -9990,6 +9990,7 @@ GameObject:
   - component: {fileID: 622838919}
   - component: {fileID: 622838918}
   - component: {fileID: 622838917}
+  - component: {fileID: 622838922}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -10106,12 +10107,24 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 622838916}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.65046555, y: -0.18501225, z: -10}
+  m_LocalPosition: {x: -0.6498507, y: -0.18501166, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &622838922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622838916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fac062335b5c8884baa61724ad6bbff8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &636205855
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11354,7 +11367,7 @@ PrefabInstance:
     - target: {fileID: 5770878195196332751, guid: cc36f69c28e45ce4b8dca842f343e7c6,
         type: 3}
       propertyPath: jumpForce
-      value: 40
+      value: 53
       objectReference: {fileID: 0}
     - target: {fileID: 5770878195196332751, guid: cc36f69c28e45ce4b8dca842f343e7c6,
         type: 3}
@@ -14029,7 +14042,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 67.35
+  m_fontSize: 67.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
