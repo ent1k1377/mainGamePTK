@@ -16,12 +16,6 @@ public class Level : MonoBehaviour
         StartCoroutine(SelectLevelCoins(number_level));
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-   
 
     private void OnMouseOver()
     {

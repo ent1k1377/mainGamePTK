@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -31,7 +32,7 @@ public class Door : MonoBehaviour
     }
     IEnumerator LoadScene()
     {
-        StartCoroutine(WebManager.ConnectDB(indexNextScene - 1, HeroMove.num_coins, 1, 0));
+        StartCoroutine(WebManager.ConnectDB(indexNextScene - 1, HeroMove.num_coins, 1, 0, Math.Abs(Convert.ToInt32(Timer.minutes * 60 + Timer.seconds))));
         HM.enabled = false;
         animHero.SetBool("onDeath", true);
         animHero.SetBool("onDeathAstral", false);

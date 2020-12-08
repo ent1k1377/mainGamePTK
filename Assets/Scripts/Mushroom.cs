@@ -13,12 +13,6 @@ public class Mushroom : MonoBehaviour
     public int force_jump = 15;
 
     public AudioSource jumpA;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         onHero = Physics2D.OverlapBox(HeroCheck.position, new Vector2(0, 0.2f), 0, HeroMask) || 

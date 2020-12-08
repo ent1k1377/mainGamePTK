@@ -258,7 +258,7 @@ public class HeroMove : MonoBehaviour
         if (onDeath && onDeathAstral)
         {
             
-            StartCoroutine(WebManager.ConnectDB(door.indexNextScene - 1, 0, 0, 1));
+            StartCoroutine(WebManager.ConnectDB(door.indexNextScene - 1, 0, 0, 1, 999999));
             onDeathAstral = false;
             Invoke("Spawn", 1);
         }

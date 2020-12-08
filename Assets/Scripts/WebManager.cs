@@ -5,13 +5,14 @@ using UnityEngine;
 public class WebManager : MonoBehaviour
 {
 
-    static public IEnumerator ConnectDB(int id, int coin, int passge, int death)
+    static public IEnumerator ConnectDB(int id, int coin, int passge, int death, int timePassage)
     {
         WWWForm form = new WWWForm();
         form.AddField("id", id);
         form.AddField("coin", coin);
         form.AddField("passage", passge);
         form.AddField("death", death);
+        form.AddField("timePassage", timePassage);
 
         WWW www = new WWW("GameDB.local", form);
         yield return www;
