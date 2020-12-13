@@ -25,6 +25,4 @@ public class Mushroom : MonoBehaviour
             HeroRB2D.AddForce(new Vector2(0, force_jump), ForceMode2D.Impulse);
         }
     }
-
-
 }

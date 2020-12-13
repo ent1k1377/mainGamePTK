@@ -73,7 +73,7 @@ public class HeroMove : MonoBehaviour
     void Movement()
     {
         downKey = -1;
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) 
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)) 
         {
             ghost.makeGhost = true;
             downKey = 1;
@@ -133,18 +133,17 @@ public class HeroMove : MonoBehaviour
         for (int i = 0; i < 6; i++)
         {
             ghost.makeGhost = true;
-            Ghost.ghostDelay = 0.001f;
+            Ghost.ghostDelay = -1f;
             rb.AddForce(vect * lungeImpulse/ 5f);
             yield return new WaitForSeconds(0.02f);
         }
-        Ghost.ghostDelay = 0.04f;
+        Ghost.ghostDelay = 0.01f;
         Invoke("LungeLock", lockLungeTime);
     }
     void Lunge()
     {
         if (Input.GetKeyDown(KeyCode.LeftControl) && lockLunge)
         {
-            //audio.Play();
             if (faceRight) StartCoroutine(TimerLunge(Vector2.right));
             else StartCoroutine(TimerLunge(Vector2.left));
         }
@@ -154,12 +153,7 @@ public class HeroMove : MonoBehaviour
         lockLunge = true;
     }
 
-    IEnumerator SwordTimer()
-    {
-        swordA.Play(1);
-        anim.SetBool("sword", true);
-        yield return new WaitForSeconds(2.4f);
-    }
+
 
     void Sword()
     {

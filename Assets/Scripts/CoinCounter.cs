@@ -7,12 +7,7 @@ using System;
 public class CoinCounter : MonoBehaviour
 {
     public TextMeshProUGUI coinCounterText;
-    void Start()
-    {
 
-    }
-
-    // Update is called once per frame
     void Update()
     {
         coinCounterText.text = Convert.ToString(HeroMove.num_coins);

@@ -16,6 +16,7 @@ public class Menu : MonoBehaviour
     }
     public void MainWindow()
     {
+        print(666);
         canvas1.SetActive(true);
         canvas2.SetActive(false);
         canvas3.SetActive(false);

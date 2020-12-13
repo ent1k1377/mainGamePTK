@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\GameDB.cs" />
     <Compile Include="Assets\Scripts\GameSettings.cs" />
+    <Compile Include="Assets\Scripts\Gear.cs" />
     <Compile Include="Assets\Scripts\Ghost.cs" />
     <Compile Include="Assets\Scripts\GoblinEnemy.cs" />
     <Compile Include="Assets\Scripts\Heart.cs" />
@@ -76,10 +77,12 @@
     <Compile Include="Assets\Scripts\Lever.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\Mushroom.cs" />
+    <Compile Include="Assets\Scripts\Sliderr.cs" />
     <Compile Include="Assets\Scripts\SlimeEnemy.cs" />
     <Compile Include="Assets\Scripts\Spikes.cs" />
     <Compile Include="Assets\Scripts\Stone.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
+    <Compile Include="Assets\Scripts\VolumeAudio.cs" />
     <Compile Include="Assets\Scripts\WebManager.cs" />
     <Compile Include="Assets\Scripts\WormEnemy.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />

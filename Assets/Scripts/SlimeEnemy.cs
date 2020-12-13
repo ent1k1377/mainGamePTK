@@ -72,8 +72,4 @@ public class SlimeEnemy : MonoBehaviour
 
         gameObject.GetComponent<Transform>().position = new Vector2(pos.x + speed * Time.deltaTime, pos.y);
     }
-
-
-
-
 }

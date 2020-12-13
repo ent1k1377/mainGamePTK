@@ -10,9 +10,7 @@ public class Door : MonoBehaviour
     public Animator animHero;
     public HeroMove HM;
     public LayerMask HeroLM;
-
-
-
+    public Gear gear;
 
     private void Update()
     {
@@ -37,7 +35,7 @@ public class Door : MonoBehaviour
         animHero.SetBool("onDeath", true);
         animHero.SetBool("onDeathAstral", false);
         animHero.Play("hero_death");
-        yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(indexNextScene + 1);
+        yield return new WaitForSeconds(0.8f);
+        gear.GearWindow(indexNextScene);
     }
 }
